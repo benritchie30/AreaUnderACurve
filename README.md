@@ -10,11 +10,11 @@ The program repeats this process recursively on the largest rectangle in the set
 The program uses a Max-heap priority queue to keep track of the intervals.
 
 Sample Input and Output:
-'''
+```
 We have the function f(x) = x^2 + x + 1.
 Please enter lower value a: 12
 Please enter upper value b: 15
 
 An approximation for the area under the curve f(x)
 between a = 12.0 and b = 15.0 is 592.500961300582
-'''
+```
