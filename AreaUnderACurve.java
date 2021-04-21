@@ -15,8 +15,7 @@ public class AreaUnderACurve {
 	private static double computeArea(double a, double b) {
 		double error = 1e-08; // This is the comparison error. See document for description.
 
-		// TODO: Please compute an approximation for the area under the curve here.
-	    Interval first = new Interval(a,b);
+        Interval first = new Interval(a,b);
         PriorityQueue pq = new PriorityQueue(10);
         pq.insert(first);
         double area = computeSubArea(first.getStart(), first.getEnd());
@@ -29,13 +28,11 @@ public class AreaUnderACurve {
             new_area = area - computeSubArea(start, end) + computeSubArea(start, mid) + computeSubArea(mid, end);          
             pq.insert(new Interval(start, mid));
             pq.insert(new Interval(mid, end));
-            //System.out.println(new_area);
-            //System.out.println(Math.abs(area - new_area));
             if (Math.abs(area - new_area) < error)
                 break;
             area = new_area;
         }
-		return area; // Remove this statement and return the computed area.
+		return area; 
 	}
 
     private static double computeSubArea(double start, double end){
